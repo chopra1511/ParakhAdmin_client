@@ -16,15 +16,51 @@ const SideBar = () => {
         </div>
 
         <ul className="flex flex-col gap-2 p-5">
-          <SideNav to="/" iconClass="fi fi-br-dashboard-monitor" label="Dashboard" />
-          <SideNav to="/products" iconClass="fi fi-br-box-open-full" label="Products" />
-          <SideNav to="/orders" iconClass="fi fi-br-order-history" label="Orders" />
-          <SideNav to="/add-product" iconClass="fi fi-br-supplier" label="Add Product" />
-          <SideNav to="/transactions" iconClass="fi fi-br-receipt" label="Transactions" />
-          <SideNav to="/reviews" iconClass="fi fi-br-review" label="Reviews" />
-          <SideNav to="/my-site" iconClass="fi fi-br-shop" label="My Site" />
-          <SideNav to="/statistics" iconClass="fi fi-br-chart-pie-alt" label="Statistics" />
-          <SideNav to="/account" iconClass="fi fi-br-user-pen" label="Account"/>
+          <SideNav
+            to="dashboard"
+            iconClass="fi fi-br-dashboard-monitor"
+            label="Dashboard"
+          />
+          <SideNav
+            to="products"
+            iconClass="fi fi-br-box-open-full"
+            label="Products"
+          />
+          <SideNav
+            to="orders"
+            iconClass="fi fi-br-order-history"
+            label="Orders"
+          />
+          <SideNav
+            to="add-product"
+            iconClass="fi fi-br-supplier"
+            label="Add Product"
+          />
+          <SideNav
+            to="transactions"
+            iconClass="fi fi-br-receipt"
+            label="Transactions"
+          />
+          <SideNav
+            to="reviews"
+            iconClass="fi fi-br-review"
+            label="Reviews"
+          />
+          <SideNav
+            to="my-site"
+            iconClass="fi fi-br-shop"
+            label="My Site"
+          />
+          <SideNav
+            to="statistics"
+            iconClass="fi fi-br-chart-pie-alt"
+            label="Statistics"
+          />
+          <SideNav
+            to="account"
+            iconClass="fi fi-br-user-pen"
+            label="Account"
+          />
         </ul>
       </div>
     </aside>

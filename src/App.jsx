@@ -4,6 +4,7 @@ import loading from "/assets/loading.gif";
 
 import Layout from "./components/Dashboard/Layout/Layout";
 import OrderDetails from "./components/Dashboard/Orders/OrderDetails";
+import HomePage from "./components/Dashboard/Dashboard/HomePage";
 
 // Lazy load pages
 const DashboardPage = lazy(() =>
@@ -31,78 +32,91 @@ function App() {
     </div>
   );
 
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />, // Wrap with Layout
+        children: [
+          {
+            index: true,
+            element: (
+              <Suspense fallback={loadingPic}>
+                <HomePage />
+              </Suspense>
+            ),
+          },
+          {
+            path: "dashboard",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <DashboardPage />
+              </Suspense>
+            ),
+          },
+          {
+            path: "products",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <Products />
+              </Suspense>
+            ),
+          },
+          {
+            path: "edit-product",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <EditProduct />
+              </Suspense>
+            ),
+          },
+          {
+            path: "add-product",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <AddProducts />
+              </Suspense>
+            ),
+          },
+          {
+            path: "orders",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <Orders />
+              </Suspense>
+            ),
+          },
+          {
+            path: "order-details",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <OrderDetails />
+              </Suspense>
+            ),
+          },
+          {
+            path: "transactions",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <Transactions />
+              </Suspense>
+            ),
+          },
+          {
+            path: "my-site",
+            element: (
+              <Suspense fallback={loadingPic}>
+                <MySite />
+              </Suspense>
+            ),
+          },
+        ],
+      },
+    ],
     {
-      path: "/",
-      element: <Layout />, // Wrap with Layout
-      children: [
-        {
-          index: true,
-          element: (
-            <Suspense fallback={loadingPic}>
-              <DashboardPage />
-            </Suspense>
-          ),
-        },
-        {
-          path: "products",
-          element: (
-            <Suspense fallback={loadingPic}>
-              <Products />
-            </Suspense>
-          ),
-        },
-        {
-          path: "edit-product",
-          element: (
-            <Suspense fallback={loadingPic}>
-              <EditProduct />
-            </Suspense>
-          ),
-        },
-        {
-          path: "add-product",
-          element: (
-            <Suspense fallback={loadingPic}>
-              <AddProducts />
-            </Suspense>
-          ),
-        },
-        {
-          path: "orders",
-          element: (
-            <Suspense fallback={loadingPic}>
-              <Orders />
-            </Suspense>
-          ),
-        },
-        {
-          path: "order-details",
-          element: (
-            <Suspense fallback={loadingPic}>
-              <OrderDetails />
-            </Suspense>
-          ),
-        },
-        {
-          path: "transactions",
-          element: (
-            <Suspense fallback={loadingPic}>
-              <Transactions />
-            </Suspense>
-          ),
-        },
-        {
-          path: "my-site",
-          element: (
-            <Suspense fallback={loadingPic}>
-              <MySite />
-            </Suspense>
-          ),
-        },
-      ],
-    },
-  ]);
+      basename: "/ParakhAdmin_client", // Set the basename here
+    }
+  );
 
   return <RouterProvider router={router} />;
 }

@@ -28,7 +28,7 @@ const ProductList = () => {
   const editProductHandler = (id) => {
     dispatch(getProductDetails(id))
       .then(() => {
-        navigate("/edit-product");
+        navigate("edit-product");
       })
       .catch((err) => {
         console.log(err);

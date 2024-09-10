@@ -54,7 +54,7 @@ const Orders = () => {
   const orderDetailsHandler = (id) => {
     dispatch(getOrderDetails(id))
       .then(() => {
-        navigate("/order-details");
+        navigate("order-details");
       })
       .catch((err) => {
         console.log(err);
