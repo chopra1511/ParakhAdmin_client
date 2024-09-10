@@ -38,7 +38,6 @@ function App() {
       children: [
         {
           index: true,
-          path: "ParakhAdmin_client",
           element: (
             <Suspense fallback={loadingPic}>
               <DashboardPage />
