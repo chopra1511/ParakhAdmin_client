@@ -2,7 +2,7 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://chopra1511.github.io/ParakhAdmin_client",
+  "homepage": "https://github.com/chopra1511/ParakhAdmin_client",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
