@@ -37,7 +37,7 @@ function App() {
       element: <Layout />, // Wrap with Layout
       children: [
         {
-          index: true,
+          path: "/ParakhAdmin_client",
           element: (
             <Suspense fallback={loadingPic}>
               <DashboardPage />
@@ -45,7 +45,7 @@ function App() {
           ),
         },
         {
-          path: "products",
+          path: "/ParakhAdmin_client/products",
           element: (
             <Suspense fallback={loadingPic}>
               <Products />
@@ -53,7 +53,7 @@ function App() {
           ),
         },
         {
-          path: "edit-product",
+          path: "/ParakhAdmin_client/edit-product",
           element: (
             <Suspense fallback={loadingPic}>
               <EditProduct />
@@ -61,7 +61,7 @@ function App() {
           ),
         },
         {
-          path: "add-product",
+          path: "/ParakhAdmin_client/add-product",
           element: (
             <Suspense fallback={loadingPic}>
               <AddProducts />
@@ -69,7 +69,7 @@ function App() {
           ),
         },
         {
-          path: "orders",
+          path: "/ParakhAdmin_client/orders",
           element: (
             <Suspense fallback={loadingPic}>
               <Orders />
@@ -77,7 +77,7 @@ function App() {
           ),
         },
         {
-          path: "order-details",
+          path: "/ParakhAdmin_client/order-details",
           element: (
             <Suspense fallback={loadingPic}>
               <OrderDetails />
@@ -85,7 +85,7 @@ function App() {
           ),
         },
         {
-          path: "transactions",
+          path: "/ParakhAdmin_client/transactions",
           element: (
             <Suspense fallback={loadingPic}>
               <Transactions />
@@ -93,7 +93,7 @@ function App() {
           ),
         },
         {
-          path: "my-site",
+          path: "/ParakhAdmin_client/my-site",
           element: (
             <Suspense fallback={loadingPic}>
               <MySite />
