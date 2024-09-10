@@ -33,11 +33,12 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/ParakhAdmin_client",
+      path: "/",
       element: <Layout />, // Wrap with Layout
       children: [
         {
           index: true,
+          path: "ParakhAdmin_client",
           element: (
             <Suspense fallback={loadingPic}>
               <DashboardPage />
