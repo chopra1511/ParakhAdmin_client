@@ -33,7 +33,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/ParakhAdmin_client",
       element: <Layout />, // Wrap with Layout
       children: [
         {

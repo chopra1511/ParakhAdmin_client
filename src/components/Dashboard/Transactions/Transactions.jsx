@@ -12,7 +12,8 @@ const Transactions = () => {
   const { orders, isLoading } = useSelector((state) => state.orders);
 
   useEffect(() => {
-    const socket = io("http://localhost:8080");
+    const socket = io("https://parakh-api.onrender.com");
+    // const socket = io("http://localhost:8080");
 
     // Listen for orderCreated event
     socket.on("orderCreated", () => {

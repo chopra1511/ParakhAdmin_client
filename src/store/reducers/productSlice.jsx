@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const base_URL = "http://localhost:3000";
+const base_URL = "https://parakhadmin-server.onrender.com";
+// const base_URL = "http://localhost:3000";
 
 export const addProducts = createAsyncThunk(
   "products/addProducts",

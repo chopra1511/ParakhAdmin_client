@@ -19,7 +19,8 @@ const Orders = () => {
   useEffect(() => {
     dispatch(getOrders());
 
-    const socket = io("http://localhost:8080");
+    const socket = io("https://parakh-api.onrender.com");
+    // const socket = io("http://localhost:8080");
 
     // Listen for orderCreated event
     socket.on("orderCreated", (newOrder) => {
