@@ -2,7 +2,8 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <div className="h-full bg-white">
+    <div className="h-full p-5">
+      <div className="h-full p-5 container bg-white rounded-2xl">
         <div className="h-full flex flex-col justify-center items-center text-black  animate-wiggle">
           <h1 className="text-8xl lg:text-9xl font-musky drop-shadow hover:text-[#f2707f] cursor-pointer">
             Parakh
@@ -11,6 +12,7 @@ const HomePage = () => {
             Let's find the best
           </h1>
         </div>
+      </div>
     </div>
   );
 };

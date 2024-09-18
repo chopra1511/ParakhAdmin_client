@@ -1,14 +1,21 @@
 import { IconButton } from "@mui/material";
 import "@flaticon/flaticon-uicons/css/all/all.css";
 import SideNav from "./SideNav"; 
+import { useNavigate } from "react-router";
 
 const SideBar = () => {
+  const navigate = useNavigate();
   return (
     <aside className="h-screen z-10">
       <div>
         <div className="px-5 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-musky cursor-pointer px-2">Parakh</h1>
+            <h1
+              className="text-3xl font-musky cursor-pointer px-2"
+              onClick={() => navigate("/")}
+            >
+              Parakh
+            </h1>
             <IconButton>
               <i className="fi fi-br-apps pt-1 px-2 text-xl text-black hover:text-[#f2707f]"></i>
             </IconButton>
@@ -41,26 +48,14 @@ const SideBar = () => {
             iconClass="fi fi-br-receipt"
             label="Transactions"
           />
-          <SideNav
-            to="reviews"
-            iconClass="fi fi-br-review"
-            label="Reviews"
-          />
-          <SideNav
-            to="my-site"
-            iconClass="fi fi-br-shop"
-            label="My Site"
-          />
+          <SideNav to="reviews" iconClass="fi fi-br-review" label="Reviews" />
+          <SideNav to="my-site" iconClass="fi fi-br-shop" label="My Site" />
           <SideNav
             to="statistics"
             iconClass="fi fi-br-chart-pie-alt"
             label="Statistics"
           />
-          <SideNav
-            to="account"
-            iconClass="fi fi-br-user-pen"
-            label="Account"
-          />
+          <SideNav to="account" iconClass="fi fi-br-user-pen" label="Account" />
         </ul>
       </div>
     </aside>

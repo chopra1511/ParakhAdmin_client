@@ -109,7 +109,7 @@ const Orders = () => {
           <h1 className="text-2xl font-Lemon font-bold text-center">Orders</h1>
         </div>
 
-        <nav className="px-10 py-5 flex justify-between border-b-2 border-dashed">
+        <nav className="px-10 py-5 flex md:flex-col xl:flex-row justify-between md:items-center border-b-2 border-dashed">
           <div className="flex items-center">
             <input
               type="text"

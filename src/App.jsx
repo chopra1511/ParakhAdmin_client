@@ -3,10 +3,14 @@ import { lazy, Suspense } from "react";
 import loading from "/assets/loading.gif";
 
 import Layout from "./components/Dashboard/Layout/Layout";
-import OrderDetails from "./components/Dashboard/Orders/OrderDetails";
-import HomePage from "./components/Dashboard/Dashboard/HomePage";
 
 // Lazy load pages
+const HomePage = lazy(() =>
+  import("./components/Dashboard/Dashboard/HomePage")
+);
+const OrderDetails = lazy(() =>
+  import("./components/Dashboard/Orders/OrderDetails")
+);
 const DashboardPage = lazy(() =>
   import("./components/Dashboard/Dashboard/DashboardPage")
 );
@@ -114,7 +118,7 @@ function App() {
       },
     ],
     {
-      basename: "/ParakhAdmin_client", // Set the basename here
+      basename: "/ParakhAdmin_client",
     }
   );
 

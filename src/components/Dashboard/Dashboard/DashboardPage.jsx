@@ -68,7 +68,7 @@ const DashboardPage = () => {
   ];
 
   return (
-    <div className="h-full p-5">
+    <div className="h-full p-5 animate-wiggle">
       <div className="h-full container">
         <div className="flex flex-col items-center">
           <h1 className="text-xl font-Pacifico text-[#f2707f]">Your</h1>
@@ -145,7 +145,7 @@ const DashboardPage = () => {
           </div>
         </div>
 
-        <div className="pt-10 px-10 flex justify-between">
+        <div className="pt-10 px-10 flex xl:flex-row md:flex-col lg:gap-10 justify-between">
           <div className="bg-white p-5 rounded-xl drop-shadow-xl w-fit">
             <h1 className="text-base font-Poppins font-semibold">
               Sale statistics
@@ -177,7 +177,7 @@ const DashboardPage = () => {
                       label: "Card",
                       color: "#ccf0d1",
                     },
-                    { value: `${upi.length}`, label: "UPI", color: "#E7B5AC"},
+                    { value: `${upi.length}`, label: "UPI", color: "#E7B5AC" },
                   ],
                   innerRadius: 30,
                   outerRadius: 100,
