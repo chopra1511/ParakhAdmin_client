@@ -67,7 +67,7 @@ function App() {
             ),
           },
           {
-            path: "edit-product",
+            path: "products/edit-product",
             element: (
               <Suspense fallback={loadingPic}>
                 <EditProduct />
@@ -91,7 +91,7 @@ function App() {
             ),
           },
           {
-            path: "order-details",
+            path: "orders/order-details",
             element: (
               <Suspense fallback={loadingPic}>
                 <OrderDetails />
