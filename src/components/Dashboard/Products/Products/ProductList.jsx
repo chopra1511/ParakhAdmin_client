@@ -46,13 +46,13 @@ const ProductList = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 xl:grid-cols-4 gap-5 overflow-x-auto py-5 px-5 hide-scrollbar">
+    <div className="flex flex-wrap justify-center gap-5 overflow-x-auto py-5 px-5 hide-scrollbar">
       {products
         .filter((item) => item.available) // Filter out unavailable products
         .map((item) => (
           <div
             key={item._id}
-            className="flex-shrink-0 drop-shadow-xl bg-white overflow-hidden"
+            className="flex-shrink-0 w-52 drop-shadow-xl bg-white overflow-hidden"
           >
             <div className="px-4 pt-4">
               <div className="relative h-40 flex justify-center items-center bg-gray-100 overflow-hidden group">
@@ -69,7 +69,7 @@ const ProductList = () => {
             </div>
             <div className="flex items-center justify-between px-5">
               <div className="py-2">
-                <h1 className="text-base capitalize lg:text-md font-Poppins font-semibold">
+                <h1 className="text-sm capitalize lg:text-md font-Poppins font-semibold">
                   {item.name}
                 </h1>
                 <h1 className="text-[12px] font-Poppins font-medium">
@@ -84,7 +84,7 @@ const ProductList = () => {
                 </h1>
               </div>
 
-              <div>
+              <div className="flex">
                 <IconButton onClick={() => editProductHandler(item._id)}>
                   <i className="fi fi-rr-edit text-base text-black hover:text-[#f2707f] pt-1 px-2"></i>
                 </IconButton>

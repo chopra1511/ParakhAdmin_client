@@ -77,7 +77,7 @@ const DashboardPage = () => {
           </h1>
         </div>
 
-        <div className="p-10 flex justify-between flex-wrap gap-5">
+        <div className="p-10 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
           <div className="revenue w-fit flex items-center gap-5 p-3 rounded-xl bg-white drop-shadow-xl">
             <div className="p-2 flex items-center bg-[#ccf0d1] rounded-full">
               <i className="fi fi-rr-usd-circle pt-1 px-1 rounded-full text-4xl text-[#00b517]"></i>
@@ -145,7 +145,7 @@ const DashboardPage = () => {
           </div>
         </div>
 
-        <div className="pt-10 px-10 flex xl:flex-row md:flex-col lg:gap-10 justify-between">
+        <div className="py-10 px-10 flex flex-wrap lg:flex-col xl:flex-row gap-10 justify-between">
           <div className="bg-white p-5 rounded-xl drop-shadow-xl w-fit">
             <h1 className="text-base font-Poppins font-semibold">
               Sale statistics

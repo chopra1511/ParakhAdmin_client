@@ -3,9 +3,12 @@ import Avatar from "@mui/material/Avatar";
 import { IconButton } from "@mui/material";
 import { useState } from "react";
 import Badge from "@mui/material/Badge";
+import { useNavigate } from "react-router";
 
 const Navbar = () => {
   const [searchBar, setSearchBar] = useState(false);
+  const navigate = useNavigate();
+
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
@@ -21,7 +24,13 @@ const Navbar = () => {
 
   return (
     <div className="bg-white z-10">
-      <nav className="flex justify-end items-center py-3 px-5">
+      <nav className="flex justify-between items-center py-3 px-5">
+          <h1
+            className="text-3xl font-musky cursor-pointer px-2"
+            onClick={() => navigate("/")}
+          >
+            Parakh
+          </h1>
         <div className="flex items-center gap-5">
           <div className="flex items-center">
             {searchBar && (
@@ -36,9 +45,9 @@ const Navbar = () => {
             </IconButton>
           </div>
           <IconButton>
-              <Badge color="error" variant="dot">
-                <i className="fi fi-br-bell text-xl pt-1 px-2 text-black hover:text-[#f2707f]"></i>
-              </Badge>
+            <Badge color="error" variant="dot">
+              <i className="fi fi-br-bell text-xl pt-1 px-2 text-black hover:text-[#f2707f]"></i>
+            </Badge>
           </IconButton>
 
           <IconButton>
